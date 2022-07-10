@@ -1,5 +1,5 @@
 {
-  "homepage": "https://github.com/Josiel1998/hyper-react-v3.3.0",
+  "homepage": "http://Josiel1998.github.io/hyper-react-v3.3.0",
   "name": "hyper-react",
   "version": "3.0.0",
   "private": true,
@@ -65,13 +65,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "flow": "flow",
-    "format": "prettier --write 'src/**/*.js'",
-    "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build"
+    "format": "prettier --write 'src/**/*.js'"
   },
   "eslintConfig": {
     "extends": [
