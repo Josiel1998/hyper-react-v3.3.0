@@ -190,7 +190,7 @@ const AllRoutes = () => {
     let Layout = getLayout();
 
     return useRoutes([
-        { path: '/', element: <Root /> },
+        { path: '/hyper-react-v3.3.0', element: <Root /> },
         {
             // public routes
             path: '/',
