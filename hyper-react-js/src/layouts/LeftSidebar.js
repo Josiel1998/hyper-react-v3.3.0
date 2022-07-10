@@ -29,7 +29,7 @@ const SideBarContent = ({ hideUserProfile }: SideBarContentProps) => {
                 <div className="leftbar-user">
                     <Link to="/">
                         <img src={profileImg} alt="" height="42" className="rounded-circle shadow-sm" />
-                        <span className="leftbar-user-name">Dominic Keller</span>
+                        <span className="leftbar-user-name">Odalis Pena</span>
                     </Link>
                 </div>
             )}

@@ -248,7 +248,7 @@ const AllRoutes = () => {
                             element: <LoadComponent component={EcommerceDashboard} />,
                         },
                         {
-                            path: 'project',
+                            path: 'metric',
                             element: <LoadComponent component={ProjectDashboard} />,
                         },
                         {

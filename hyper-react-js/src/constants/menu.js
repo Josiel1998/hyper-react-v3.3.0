@@ -4,6 +4,128 @@ const MENU_ITEMS = [
         key: 'dashboards',
         label: 'Dashboards',
         isTitle: false,
+        icon: 'uil-chart-line',
+        badge: { variant: 'success', text: '4' },
+        children: [
+            {
+                key: 'ds-metric',
+                label: 'Metric',
+                url: '/dashboard/metric',
+                parentKey: 'dashboards',
+            }
+        ],
+    },
+    { key: 'apps', label: 'Apps', isTitle: true },
+    {
+        key: 'apps-files',
+        label: 'Files',
+        isTitle: false,
+        icon: 'uil-clipboard-notes',
+        children: [
+            {
+                key: 'files-list',
+                label: 'List',
+                url: '/apps/files/list',
+                parentKey: 'apps-crm',
+            },
+            {
+                key: 'files-manage',
+                label: 'Manage',
+                url: '/apps/files/manage',
+                parentKey: 'apps-crm',
+            }
+        ],
+    },
+    {
+        key: 'apps-teams',
+        label: 'Teams',
+        isTitle: false,
+        icon: 'uil-chat-bubble-user',
+        children: [
+            {
+                key: 'teams-list',
+                label: 'List',
+                url: '/apps/teams/list',
+                parentKey: 'apps-teams',
+            },
+            {
+                key: 'teams-manage',
+                label: 'Manage',
+                url: '/apps/teams/manage',
+                parentKey: 'apps-teams',
+            }
+        ],
+    },
+    {
+        key: 'apps-contacts',
+        label: 'Contacts',
+        isTitle: false,
+        icon: 'uil-phone-alt',
+        children: [
+            {
+                key: 'email-inbox',
+                label: 'List',
+                url: '/apps/contacts/list',
+                parentKey: 'apps-contacts',
+            },
+            {
+                key: 'email-read-email',
+                label: 'Manage',
+                url: '/apps/contacts/manage',
+                parentKey: 'apps-contacts',
+            },
+        ],
+    },
+    {
+        key: 'apps-chat',
+        label: 'Chat',
+        isTitle: false,
+        icon: 'uil-comment-alt-dots'
+    },
+    {
+        key: 'apps-file-manager',
+        label: 'File Manager (TBD)',
+        isTitle: false,
+        icon: 'uil-folder-plus',
+        url: '/apps/file',
+    },
+
+    { key: 'custom', label: 'Custom', isTitle: true },
+    {
+        key: 'templates',
+        label: 'Templates',
+        isTitle: false,
+        icon: 'uil-copy-alt',
+        children: [
+            {
+                key: 'templates-list',
+                label: 'List',
+                url: '/templates/list',
+                parentKey: 'templates',
+            },
+            {
+                key: 'templates-create',
+                label: 'Create',
+                url: '/templates/create',
+                parentKey: 'templates',
+            },
+            {
+                key: 'templates-update',
+                label: 'Update',
+                url: '/templates/update',
+                parentKey: 'templates',
+            }
+        ],
+    }
+];
+
+/**
+ * [
+    { key: 'navigation', label: 'Navigation', isTitle: true },
+    {
+        key: 'dashboards',
+        label: 'Dashboards',
+        isTitle: false,
         icon: 'uil-home-alt',
         badge: { variant: 'success', text: '4' },
         children: [
@@ -690,5 +812,7 @@ const MENU_ITEMS = [
         ],
     },
 ];
+ * 
+ */
 
 export default MENU_ITEMS;
