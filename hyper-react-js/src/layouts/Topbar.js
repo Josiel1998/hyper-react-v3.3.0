@@ -8,10 +8,12 @@ import classNames from 'classnames';
 import { showRightSidebar, changeSidebarType } from '../redux/actions';
 
 // components
+import LanguageDropdown from '../components/LanguageDropdown';
 import NotificationDropdown from '../components/NotificationDropdown';
 import ProfileDropdown from '../components/ProfileDropdown';
 import SearchDropdown from '../components/SearchDropdown';
 import TopbarSearch from '../components/TopbarSearch';
+import AppsDropdown from '../components/AppsDropdown/';
 
 // images
 import profilePic from '../assets/images/users/avatar-1.jpg';
@@ -187,14 +189,27 @@ const Topbar = ({ hideLogo, navCssClasses, openLeftMenuCallBack, topbarDark }: T
                         <li className="notification-list topbar-dropdown d-xl-none">
                             <SearchDropdown />
                         </li>
+                        <li className="dropdown notification-list topbar-dropdown d-none d-lg-block">
+                            <LanguageDropdown />
+                        </li>
                         <li className="dropdown notification-list">
                             <NotificationDropdown notifications={Notifications} />
+                        </li>
+                        <li className="dropdown notification-list d-none d-sm-inline-block">
+                            <AppsDropdown />
+                        </li>
+                        <li className="notification-list">
+                            <button
+                                className="nav-link dropdown-toggle end-bar-toggle arrow-none btn btn-link shadow-none"
+                                onClick={handleRightSideBar}>
+                                <i className="dripicons-gear noti-icon"></i>
+                            </button>
                         </li>
                         <li className="dropdown notification-list">
                             <ProfileDropdown
                                 profilePic={profilePic}
                                 menuItems={ProfileMenus}
-                                username={'Andy Pena'}
+                                username={'Dominic Keller'}
                                 userTitle={'Founder'}
                             />
                         </li>
